@@ -41,6 +41,12 @@ module.exports = {
       buildTime: buildTime.toISOString(),
     }),
     new HtmlWebpackPlugin({
+      title: 'max-age=0',
+      filename: 'max-age-0/index.html',
+      template: path.join(__dirname, 'index.html'),
+      buildTime: buildTime.toISOString(),
+    }),
+    new HtmlWebpackPlugin({
       title: 'max-age=60',
       filename: 'max-age-60/index.html',
       template: path.join(__dirname, 'index.html'),
