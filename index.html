@@ -5,23 +5,43 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <style>
+    html {
+      font-family: monospace;
+    }
+  </style>
 </head>
 <body>
   <div>
+    <a href="/">default</a>
+    <a href="/last-modified/">last-modified</a>
+    <a href="/expires/">last-modified</a>
+    <a href="/etag/">last-modified</a>
+    <a href="/max-age-60/">last-modified</a>
+    <a href="/max-age-600/">last-modified</a>
+    <a href="/max-age-60000/">max-age-60000</a>
+    <a href="/no-cache/">no-cache</a>
+    <a href="/no-store/">no-store</a>
+  </div>
+  <div>
     <span>Cache-Type</span>
-    <span id="type"></span>
+    <span id="type"><%= htmlWebpackPlugin.options.title %></span>
   </div>
   <div>
-    <span>Build Time: </span>
-    <span id="build-time"></span>
+    <span>Build  Time: </span>
+    <span id="build-time"><%= htmlWebpackPlugin.options.buildTime %></span>
   </div>
   <div>
-    <span>Run Time: </span>
+    <span>Deploy Time: </span>
+    <span id="deploy-time"></span>
+  </div>
+  <div>
+    <span>Run   Time: </span>
     <span id="run-time"></span>
   </div>
   <div>
-    <span>Current Time: </span>
+    <span>Now   Time: </span>
     <span id="current-time"></span>
   </div>
 </body>

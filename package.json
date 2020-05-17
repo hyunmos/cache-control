@@ -5,6 +5,12 @@
   "repository": "https://github.com/hyunmos/cache-control",
   "author": "HyunMo Ahn <gusahdks@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "nginx:run": "sh ./scripts/nginx/run.sh",
+    "nginx:stop": "sh ./scripts/nginx/stop.sh",
+    "nginx:reload": "sh ./scripts/nginx/reload.sh"
+  },
   "devDependencies": {
     "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.43.0",
