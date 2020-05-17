@@ -10,17 +10,24 @@
     html {
       font-family: monospace;
     }
+
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: blue;
+    }
   </style>
 </head>
 <body>
   <div>
     <a href="/">default</a>
     <a href="/last-modified/">last-modified</a>
-    <a href="/expires/">last-modified</a>
-    <a href="/etag/">last-modified</a>
-    <a href="/max-age-60/">last-modified</a>
-    <a href="/max-age-600/">last-modified</a>
-    <a href="/max-age-60000/">max-age-60000</a>
+    <a href="/expires/">expires</a>
+    <a href="/etag/">etag</a>
+    <a href="/max-age-60/">max-age-60</a>
+    <a href="/max-age-600/">max-age-600</a>
     <a href="/no-cache/">no-cache</a>
     <a href="/no-store/">no-store</a>
   </div>
@@ -29,8 +36,8 @@
     <span id="type"><%= htmlWebpackPlugin.options.title %></span>
   </div>
   <div>
-    <span>Build  Time: </span>
-    <span id="build-time"><%= htmlWebpackPlugin.options.buildTime %></span>
+    <span>Cached Time: </span>
+    <span id="cache-time"><%= htmlWebpackPlugin.options.buildTime %></span>
   </div>
   <div>
     <span>Deploy Time: </span>
